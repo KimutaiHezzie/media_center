@@ -1,14 +1,27 @@
 {
-  "version": 2,
-  "name": "media-center",
-  "routes": [
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "backend": {
+      "root": "backend",
+      "framework": "vite"
+    },
+    "frontend": {
+      "root": "frontend",
+      "framework": "vite"
+    }
+  },
+  "rewrites": [
     {
-      "src": "/images/(.*)",
-      "dest": "https://media-center-backend.vercel.app/images/$1"
+      "source": "/api/(.*)",
+      "destination": {
+        "service": "backend"
+      }
     },
     {
-      "src": "/(.*)",
-      "dest": "/frontend/dist/index.html"
+      "source": "/(.*)",
+      "destination": {
+        "service": "frontend"
+      }
     }
   ]
 }
