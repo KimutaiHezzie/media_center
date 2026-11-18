@@ -15,13 +15,13 @@
     {
       "source": "/api/(.*)",
       "destination": {
-        "service": "media center"
+        "service": "multi-media-api"
       }
     },
     {
       "source": "/(.*)",
       "destination": {
-        "service": "frontend"
+        "service": "web"
       }
     }
   ]
