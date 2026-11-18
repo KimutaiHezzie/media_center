@@ -1,12 +1,12 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "$schema": "https://vercel.sh",
   "services": {
-    "pesa-yetu-api": {
+    "media-center-api": {
       "root": "backend",
       "framework": "nestjs",
       "buildCommand": "npm run build"
     },
-    "web": {
+    "frontend": {
       "root": "frontend",
       "framework": "vite"
     }
@@ -15,13 +15,13 @@
     {
       "source": "/api/(.*)",
       "destination": {
-        "service": "multi-media-api"
+        "service": "media-center-api"
       }
     },
     {
       "source": "/(.*)",
       "destination": {
-        "service": "web"
+        "service": "frontend"
       }
     }
   ]
