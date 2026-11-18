@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "media-center",
+  "routes": [
+    {
+      "src": "/images/(.*)",
+      "dest": "https://media-center-backend.vercel.app/images/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/dist/index.html"
+    }
+  ]
+}
