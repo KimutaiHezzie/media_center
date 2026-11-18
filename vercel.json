@@ -7,7 +7,7 @@
       "buildCommand": "npm run build"
     },
     "web": {
-      "root": "web",
+      "root": "frontend",
       "framework": "vite"
     }
   },
